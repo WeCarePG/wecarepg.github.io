@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Horizontal Slider with Linked Buttons</title>
+    <style>
+        /* Style for the slider container */
+        .slider-container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+            height: 400px;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #f2f2f2;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0 20px;
+            
+        }
+        .slide:nth-child(1) {
+            background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pcworld.com%2Farticle%2F477831%2Fhow-to-read-qr-codes-with-a-smartphone.html&psig=AOvVaw1Wllwv4C0xP0WbFneYV5i2&ust=1680705740693000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKiHkve6kP4CFQAAAAAdAAAAABAF");
+        }
+        
+        .slide:nth-child(2) {
+            background-image: url("https://example.com/image2.jpg");
+        }
+        
+        .slide:nth-child(3) {
+            background-image: url("https://example.com/image3.jpg");
+        }
+    
+        /* Style for each slide */
+        .slide {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 380px;
+            width: calc((100% - 60px) / 3);
+            margin-right: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            scroll-snap-align: center;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        .slide:nth-child(3n) {
+            margin-right: 0;
+        }
+        .slide:hover {
+            transform: rotateY(10deg);
+        }
+    
+        /* Style for the button container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    
+        /* Style for each button */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .slide p {
+           font-size: 16px;
+           line-height: 0.8;
+           color: #333;
+            margin: 10px 0;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slide">
+            <h2> Scan, Pay, Stay</h2>
+            <p>Skip the hassle of cash payments - pay for your stay  </p>
+            <p>at our hotel or BnB with a quick and easy  </p>
+            <p>  QR code scan.  </p>
+            <div class="button-container">
+                <a href="https://jeffery-jdr.github.io/service-learning/payment.html" class="button">Pay Now</a>
+            </div>
+        </div>
+        <div class="slide">
+            <h2>Call for room service</h2>
+            <p>Our room service is just a phone call away, with a  </p>
+            <p>with a friendly and casual tone to make  </p>
+            <p>you feel right feel rightat home. </p>
+            <div class="button-container">
+                <a href="page3.html" class="button">Call Now</a>
+                
+            </div>
+        </div>
+        <div class="slide">
+            <h2>Get Compliant, No Hassle!</h2>
+            <p>Our compliant registration box makes it easy for  </p>
+            <p>guests to check-in and comply with local  </p>
+            <p>regulations, without any hassle or delays.</p>
+            <div class="button-container">
+                <a href="https://jeffery-jdr.github.io/service-learning/complient.html" class="button">any compliant?</a>
+                
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+       
